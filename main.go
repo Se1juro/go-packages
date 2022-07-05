@@ -15,8 +15,12 @@ func main() {
 	countries.AddCountry("Argentina")
 	countries.AddCountry("Brazil")
 	countries.AddCountry("Japan")
+	countries.AddCountry("USA")
 
-	countries.SetMyCountry("Colombia")
+	err := countries.SetMyCountry("USA")
+	if err != nil {
+		panic(err)
+	}
 
 	countries.GetCountries()
 

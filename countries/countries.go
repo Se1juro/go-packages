@@ -9,14 +9,12 @@ var myCountry string = " "
 var errorNotFound error = errors.New("Country not found")
 var countries []string
 
-func New() {
-
-}
-
+// Add the country name to the countries collection
 func AddCountry(countryName string) {
 	countries = append(countries, countryName)
 }
 
+// Get all elements from collection countries
 func GetCountries() {
 	for i, name := range countries {
 		myCountryMsg := ""
@@ -27,6 +25,7 @@ func GetCountries() {
 	}
 }
 
+// Set the country selected
 func SetMyCountry(country string) error {
 	if !isInCollection(country) {
 		return errorNotFound
